@@ -1,0 +1,4 @@
+data_path: /home/andriiprysiazhnyk/Documents/data_processing/sentiment_analysis_data/aclImdb_v1/aclImdb
+embeddings_path: /home/andriiprysiazhnyk/Documents/data_processing/sentiment_analysis_data/glove_embeddings
+cleaned_data_path: /home/andriiprysiazhnyk/Documents/data_processing/sentiment_analysis_data/cleaned_data
+stemmed_data_path: /home/andriiprysiazhnyk/Documents/data_processing/sentiment_analysis_data/stemmed_data

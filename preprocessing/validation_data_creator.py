@@ -12,9 +12,9 @@ def move_half_files(in_path, out_path):
         os.replace(os.path.join(in_path, file_name), os.path.join(out_path, file_name))
 
 
-if __name__ == "__main__":
-    test_path = os.path.join(os.path.curdir, "data", "test")
-    validation_path = os.path.join(os.path.curdir, "data", "validation")
+def create_validation_set(data_path):
+    test_path = os.path.join(data_path, "test")
+    validation_path = os.path.join(data_path, "validation")
     positive_instances_path = os.path.join(validation_path, "pos")
     negative_instances_path = os.path.join(validation_path, "neg")
 

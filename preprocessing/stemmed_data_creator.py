@@ -18,16 +18,13 @@ def process_folder(in_path, out_path, stemmer):
                 instance_file.write(stemmed_content)
 
 
-if __name__ == "__main__":
-    input_path = os.path.join(os.path.curdir, "cleaned_data")
-    output_path = os.path.join(os.path.curdir, "stemmed_data")
-
-    if not os.path.exists(output_path):
-        os.mkdir(output_path)
+def create_stemmed_data(cleaned_data_path, stemmed_data_path):
+    if not os.path.exists(stemmed_data_path):
+        os.mkdir(stemmed_data_path)
 
     stemmer = PorterStemmer()
-    for folder in os.listdir(input_path):
-        cur_path = os.path.join(output_path, folder)
+    for folder in os.listdir(cleaned_data_path):
+        cur_path = os.path.join(stemmed_data_path, folder)
         os.mkdir(cur_path)
 
-        process_folder(os.path.join(input_path, folder), cur_path, stemmer)
+        process_folder(os.path.join(cleaned_data_path, folder), cur_path, stemmer)
